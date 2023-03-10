@@ -22,7 +22,7 @@ html {
 /*CONTENEDOR - 1 */
 
 .contenedor-1 {
-    min-height: 90vh;
+    min-height: 94vh;
     background-position: center center;
     background-image: url(../img/hero.jpg);
     background-size: cover;
@@ -36,6 +36,7 @@ html {
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: 0;
 
 }
 
@@ -82,10 +83,11 @@ nav ul li a{
    text-transform: uppercase;
 }
 
-.contenedor1-central {
-    margin-top: 27vh;
+ .contenedor1-central {
+    margin-top: 24vh;
     text-align: center;
     text-shadow: 2px 2px 10px rgb(81, 81, 81);
+    margin-bottom: 30px;
 }
 
 .contenedor1-central h2 {
@@ -127,7 +129,7 @@ nav ul li a{
         display: block;
         margin-top: 30px;
         margin-right: 40px;
-        z-index: 50;
+        z-index: 100;
     }
 
     nav .menu:hover+ul{
@@ -295,11 +297,9 @@ nav ul li a{
 /*CONTENEDOR 4 */
 
 .contenedor-4{
-    width: 100%;
     display: flex;
     margin-bottom: 100px;
    overflow: hidden;
-
 }
 
 .c4-contenido {
@@ -453,6 +453,7 @@ iframe{
     margin: 5px;
     position: relative;
 	display: flex;
+    justify-content: center;
 	align-items: center;
 	overflow: hidden;
     object-fit: cover;
@@ -504,6 +505,7 @@ iframe{
     font-size: 40px;
     text-shadow: 2px 2px gray;
     text-transform: uppercase;
+    width: 90%;
 }
 
 .c5-img h2:hover{
@@ -574,6 +576,7 @@ iframe{
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
             overflow: hidden;
            padding: 0 20px;
            margin-left: 0;
@@ -585,11 +588,72 @@ iframe{
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-left: 0;
-   
     } 
-
 }
+
+/*CONTENEDOR-5bios*/
+
+.contenedor-5bis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0 100px;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario h2 {
+    color: black;
+    font-size: 38px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.formulario span {
+    color: #3bcc75;
+}
+
+.campo {
+    border-radius: 20px;
+    padding: 14px 35px;
+    background-color: #d4d4d4;
+    border: solid 1px #d4d4d4;
+    color: #3f3f3f;
+    margin: 10px;
+}
+
+.campo::placeholder {
+    color: #8a8888;
+}
+
+.c5bis-btn{
+    padding: 12px 75px;
+    background-color: #ffc845;
+    color: white;
+    border: none;
+    margin: 15px 0 0 12px;
+}
+
+@media (max-width: 870px){
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}    
+
+
+
+
+
 /*CONTENEDOR 6*/
 
 .contenedor-6 {
@@ -659,9 +723,6 @@ iframe{
     margin-top: 5px;
 }
 
-
-
-
 .mail h2 {
 margin-bottom: 40px;
 text-align: center;
@@ -685,7 +746,7 @@ letter-spacing: 4px;
 
     @media (max-width: 787px){
         .c6-contacto {
-            width: 105%;
+            width: 720px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -696,8 +757,25 @@ letter-spacing: 4px;
         }
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 730px){
+        .c6-nosotros {
+            width: 550px;
+        }
+        .c6-contacto {
+            width: 550px;
+        }   
+    }
+
+    @media (max-width: 575px){
+        .c6-nosotros {
+            width: 380px;
+        }
+
         .c6-nosotros p{
             width: 380px;
         }
+
+        .c6-contacto {
+            width: 380px;
+        } 
     }
